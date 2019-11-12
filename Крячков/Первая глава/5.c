@@ -8,7 +8,7 @@ int main()
     setlocale(LC_CTYPE, "rus");
     double e, ai = 1./2., aj = 1;
     int z = 2;
-    printf("Ведите значение e, 0 < e < 0,1\n");
+    printf("Введите значение e, 0 < e < 0,1\n");
     scanf("%lf", &e);
     for(int i = 3; !(fabs(ai - aj) < e); i++){
         aj = ai;

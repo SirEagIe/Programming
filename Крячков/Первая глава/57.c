@@ -18,6 +18,5 @@ int main()
         }
     }
     printf("Результат равен %lf\n", S);
-    }
     return 0;
 }

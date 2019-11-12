@@ -7,7 +7,7 @@ int main()
 {
     setlocale(LC_CTYPE, "rus");
     int n, ch, zn;
-    printf("¬ведите n, n > 10\n");
+    printf("Введите n, n > 10\n");
     scanf("%d", &n);
     double sum, d;
     sum = 1;

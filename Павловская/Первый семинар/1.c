@@ -9,3 +9,5 @@ int main()
 	printf("Fahrenheit: %f, Celsius: %f", fahr, cels);
 	return 0;
 }
+
+//flag{eazy_laby}

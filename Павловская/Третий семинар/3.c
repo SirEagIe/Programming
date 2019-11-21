@@ -13,7 +13,7 @@ int main()
     printf("Введите элементы массива\n");
     for(int i = 0; i < n; i++)
     {
-         scanf("%d", &arr[i]);
+        scanf("%d", &arr[i]);
     }
     printf("Элементы массива равны:\n");
     for(int i = 0; i < n; i++)

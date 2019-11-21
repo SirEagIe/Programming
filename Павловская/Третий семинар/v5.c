@@ -12,9 +12,17 @@ int main()
     printf("Введите размер массива\n");
     scanf("%d", &n);
     float arr[n];
-    randomArray(arr, n);
+    printf("Введите элементы массива\n");
+    for(int i = 0; i < n; i++)
+    {
+        scanf("%f", &arr[i]);
+    }
     printf("Элементы массива равны:\n");
-    printArray(arr, n);
+    for(int i = 0; i < n; i++)
+    {
+        printf("%7.2f ", arr[i]);
+    }
+    printf("\n");
     for(int i = 0; i < n; i++)
         if(arr[i] > max || i == 0)
             max = arr[i];
@@ -34,32 +42,10 @@ int main()
         if(fabs(arr[i]) >= a && fabs(arr[i]) <= b)
             arr[i] = 0;
     printf("Массив после сжатия:\n");
-    printArray(arr, n);
-    return 0;
-}
-
-void randomArray(float *arr, int size)            //заполнение массива случайными элементами
-{
-    srand(time(NULL));
-    for(int i = 0; i < size; i++)
-    {
-        arr[i] = (-10000 + rand()%20000)/100.;
-    }
-}
-
-void usersArray(float *arr, int size)             //пользовательский ввод массива
-{
-    for(int i = 0; i < size; i++)
-    {
-        scanf("%f", &arr[i]);
-    }
-}
-
-void printArray(float *arr, int size)             //вывести значения элементов массива
-{
-    for(int i = 0; i < size; i++)
+    for(int i = 0; i < n; i++)
     {
         printf("%7.2f ", arr[i]);
     }
     printf("\n");
+    return 0;
 }

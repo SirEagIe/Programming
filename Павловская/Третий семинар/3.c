@@ -12,12 +12,12 @@ int main()
     printf("Введите элементы массива\n");
     for(int i = 0; i < n; i++)
     {
-        scanf("%d", &arr[i]);
+        scanf("%f", &arr[i]);
     }
     printf("Элементы массива равны:\n");
     for(int i = 0; i < n; i++)
     {
-        printf("%d ", arr[i]);
+        printf("%.2f ", arr[i]);
     }
     printf("\n");
     //Сортировка
@@ -58,7 +58,7 @@ int main()
     printf("\n");
     for(int i = 0; i < n; i++)
     {
-        printf("%d ", arr[i]);
+        printf("%.2f ", arr[i]);
     }
     printf("\n");
     return 0;

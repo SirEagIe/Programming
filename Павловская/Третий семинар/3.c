@@ -10,9 +10,18 @@ int main()
     float arr[n], middle, temp;
     int stackl[n], stackr[n], sp = 0;
     int i, j, left, right;
+    printf("Введите элементы массива\n");
+    for(int i = 0; i < n; i++)
+      {
+         scanf("%d", &arr[i]);
+       }
+    }
     printf("Элементы массива равны:\n");
-    randomArray(arr, n);
-    printArray(arr, n);
+    for(int i = 0; i < n; i++)
+    {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
     //Сортировка
     sp = 1; stackl[1] = 0; stackr[1] = n - 1;
     while(sp > 0)
@@ -49,32 +58,10 @@ int main()
     }
     //Вывод результата
     printf("\n");
-    printArray(arr, n);
-    return 0;
-}
-
-void randomArray(int *arr, int size)            //заполнение массива случайными элементами
-{
-    srand(time(NULL));
-    for(int i = 0; i < size; i++)
-    {
-        arr[i] = rand()%20;
-    }
-}
-
-void usersArray(int *arr, int size)             //пользовательский ввод массива
-{
-    for(int i = 0; i < size; i++)
-    {
-        scanf("%d", &arr[i]);
-    }
-}
-
-void printArray(int *arr, int size)             //вывести значения элементов массива
-{
-    for(int i = 0; i < size; i++)
+    for(int i = 0; i < n; i++)
     {
         printf("%d ", arr[i]);
     }
     printf("\n");
+    return 0;
 }

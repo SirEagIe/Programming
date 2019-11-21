@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
 #include <locale.h>
 #include <math.h>
 
@@ -13,9 +12,16 @@ int main()
     scanf("%d", &n);
     float arr[n];
     printf("Введите элементы массива\n");
-    usersArray(arr, n); //0.19   -62.04   -67.91   77.59   -80.34   67.02   57.19   -60.45   27.41   68.65
-    /*printf("Элементы массива равны:\n");
-    printArray(arr, n);*/
+    for(int i = 0; i < n; i++)
+    {
+        scanf("%f", &arr[i]);
+    }                               //0.19   -62.04   -67.91   77.59   -80.34   67.02   57.19   -60.45   27.41   68.65
+    printf("Элементы массива равны:\n");
+    for(int i = 0; i < n; i++)
+    {
+        printf("%7.2f ", arr[i]);
+    }
+    printf("\n");
     printf("Введите число C\n");
     scanf("%f", &c);
     for(int i = 0; i < n; i++)
@@ -58,32 +64,10 @@ int main()
     for(int i = 0; i < n; i++)
         arr[i] = stack[i];
     printf("Массив после преобразования:\n");
-    printArray(arr, n);
-    return 0;
-}
-
-void randomArray(float *arr, int size)            //заполнение массива случайными элементами
-{
-    srand(time(NULL));
-    for(int i = 0; i < size; i++)
-    {
-        arr[i] = (-10000 + rand()%20000)/100.;
-    }
-}
-
-void usersArray(float *arr, int size)             //пользовательский ввод массива
-{
-    for(int i = 0; i < size; i++)
-    {
-        scanf("%f", &arr[i]);
-    }
-}
-
-void printArray(float *arr, int size)             //вывести значения элементов массива
-{
-    for(int i = 0; i < size; i++)
+    for(int i = 0; i < n; i++)
     {
         printf("%7.2f ", arr[i]);
     }
     printf("\n");
+    return 0;
 }
